@@ -1,9 +1,53 @@
+<!-- 1. ways to associate `label` -- to -- form control -->
+<h1>ways to associate `label` -- to -- form control</h1>
+<!-- 1.1 via attributes -->
 <div class="preference">
   <label for="cheese">Do you like cheese?</label>
   <input type="checkbox" name="cheese" id="cheese" />
 </div>
 
+<!-- 1.2 via nesting -->
 <div class="preference">
-  <label for="peas">Do you like peas?</label>
-  <input type="checkbox" name="peas" id="peas" />
+  <label>
+    Do you like peas?
+    <input type="checkbox" name="peas"  />
+  </label>
 </div>
+
+<!-- 2. if you click or touche | label -> browser -- passes the --
+  focus to -- its associated form control
+  hit event | form control  -->
+<!-- Click | label & check how the input checkbox is clicked!! -->
+
+<!-- 3. MULTIPLE labels -- can be associated with the -- SAME form control -->
+<h1>MULTIPLE labels -- can be associated with the -- SAME form control</h1>
+<label for="username">Enter your username:</label>
+<input id="username" name="username" type="text" />
+<label for="username">Forgot your username?</label>
+
+<!-- 4. form controls / can be associated -->
+<h1>form controls / can be associated</h1>
+<!-- 4.1 button -->
+<label for="submit-btn">Submit Form:</label>
+<button id="submit-btn" name="submit">Submit</button>
+<!-- 4.2 meter -->
+<label for="disk-space">Disk usage:</label>
+<meter id="disk-space" value="0.8" min="0" max="1">80% used</meter>
+<!-- 4.3 output -->
+<label for="result">Calculation Result:</label>
+<output id="result" name="result">0</output>
+<!-- 4.4 progress -->
+<label for="download-progress">Download Progress:</label>
+<progress id="download-progress" max="100" value="70">70%</progress>
+<!-- 4.5 select -->
+<label for="country">Select your country:</label>
+<select id="country" name="country">
+  <option value="us">United States</option>
+  <option value="ca">Canada</option>
+  <option value="uk">United Kingdom</option>
+</select>
+<!-- 4.6 textarea -->
+<label for="comments">Your comments:</label>
+<textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+<!-- TODO: -->
