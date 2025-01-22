@@ -44,3 +44,4 @@ jspm_packages
 
 # config directory output from docker build
 .config
+/.idea
