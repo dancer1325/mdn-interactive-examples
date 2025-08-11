@@ -1,6 +1,7 @@
-<form>
+<form id="monsterForm">        <!-- 1. form / related to the fieldset-->
   <fieldset>
-    <legend>Choose your favorite monster</legend>
+    <legend>Choose your favorite monster</legend>   <!-- 2. == <fieldset>'s caption == title-->
+    <legend>SECOND legend -- NOT taken in account -- as a capture</legend>
 
     <input type="radio" id="kraken" name="monster" value="K" />
     <label for="kraken">Kraken</label><br />
@@ -11,4 +12,25 @@
     <input type="radio" id="mothman" name="monster" value="M" />
     <label for="mothman">Mothman</label>
   </fieldset>
+
+  <fieldset disabled>
+    <legend>fieldset disabled</legend>   <!-- == <fieldset>'s caption == title-->
+
+    <!-- 3. form's control descendent is disabled-->
+    <input type="radio" id="krakenDisabled" name="monster" value="K" />
+    <label for="krakenDisabled">Kraken disabled</label><br />
+  </fieldset>
 </form>
+
+<fieldset form="monsterForm">   <!-- 4. fieldset associated -- via -- form attribute -->
+  <legend>fieldset associated to a form -- via -- form attribute / NOT nested</legend>   <!-- == <fieldset>'s caption == title-->
+
+  <input type="radio" id="krakenViaFieldsetAssociatedViaFormAttribute" name="monster" value="K" />
+  <label for="krakenViaFieldsetAssociatedViaFormAttribute">Kraken associated via form Attribute</label><br />
+</fieldset>
+
+<script>
+const form = document.getElementById('monsterForm');
+console.log('Form elements:', form.elements);
+console.log('Number of elements:', form.elements.length);
+</script>
